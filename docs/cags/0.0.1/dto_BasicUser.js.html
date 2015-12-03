@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>dto/BasicUser.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-AbstractHandler.html">AbstractHandler</a><ul class='methods'><li data-type='method'><a href="module-AbstractHandler.html#~getUser">getUser</a></li><li data-type='method'><a href="module-AbstractHandler.html#~login">login</a></li><li data-type='method'><a href="module-AbstractHandler.html#~write">write</a></li></ul></li><li><a href="module-BasicLengthDecoder.html">BasicLengthDecoder</a><ul class='methods'><li data-type='method'><a href="module-BasicLengthDecoder.html#~addCmdHandler">addCmdHandler</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~checkAuthorized">checkAuthorized</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~delCmdHandler">delCmdHandler</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~handleException">handleException</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~init">init</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~onMsg">onMsg</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~onReceive">onReceive</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~useFileSystem">useFileSystem</a></li></ul></li><li><a href="module-BasicUser.html">BasicUser</a><ul class='methods'><li data-type='method'><a href="module-BasicUser.html#~isOnline">isOnline</a></li><li data-type='method'><a href="module-BasicUser.html#~offline">offline</a></li><li data-type='method'><a href="module-BasicUser.html#~online">online</a></li><li data-type='method'><a href="module-BasicUser.html#~reconnect">reconnect</a></li><li data-type='method'><a href="module-BasicUser.html#~write">write</a></li></ul></li><li><a href="module-Builder.html">Builder</a></li><li><a href="module-ClassUtil.html">ClassUtil</a><ul class='methods'><li data-type='method'><a href="module-ClassUtil.html#.getObject">getObject</a></li><li data-type='method'><a href="module-ClassUtil.html#.reload">reload</a></li><li data-type='method'><a href="module-ClassUtil.html#.watch">watch</a></li></ul></li><li><a href="module-Packet.html">Packet</a><ul class='methods'><li data-type='method'><a href="module-Packet.html#~createSuccess">createSuccess</a></li><li data-type='method'><a href="module-Packet.html#~getBuffer">getBuffer</a></li><li data-type='method'><a href="module-Packet.html#~getSize">getSize</a></li><li data-type='method'><a href="module-Packet.html#~useLog">useLog</a></li><li data-type='method'><a href="module-Packet.html#~write">write</a></li></ul></li><li><a href="module-ProtobufUtil.html">ProtobufUtil</a><ul class='methods'><li data-type='method'><a href="module-ProtobufUtil.html#.getPath">getPath</a></li><li data-type='method'><a href="module-ProtobufUtil.html#.getUpPath">getUpPath</a></li><li data-type='method'><a href="module-ProtobufUtil.html#.isMessage">isMessage</a></li><li data-type='method'><a href="module-ProtobufUtil.html#.load">load</a></li></ul></li><li><a href="module-Result.html">Result</a></li><li><a href="module-RPCClient.html">RPCClient</a><ul class='methods'><li data-type='method'><a href="module-RPCClient.html#~getService">getService</a></li><li data-type='method'><a href="module-RPCClient.html#~init">init</a></li><li data-type='method'><a href="module-RPCClient.html#~onClose">onClose</a></li><li data-type='method'><a href="module-RPCClient.html#~onConnected">onConnected</a></li><li data-type='method'><a href="module-RPCClient.html#~onError">onError</a></li><li data-type='method'><a href="module-RPCClient.html#~onTimeout">onTimeout</a></li><li data-type='method'><a href="module-RPCClient.html#~reconnect">reconnect</a></li><li data-type='method'><a href="module-RPCClient.html#~sendToServer">sendToServer</a></li></ul></li><li><a href="module-RPCServer.html">RPCServer</a><ul class='methods'><li data-type='method'><a href="module-RPCServer.html#~add">add</a></li><li data-type='method'><a href="module-RPCServer.html#~del">del</a></li><li data-type='method'><a href="module-RPCServer.html#~getClient">getClient</a></li><li data-type='method'><a href="module-RPCServer.html#~getService">getService</a></li><li data-type='method'><a href="module-RPCServer.html#~init">init</a></li><li data-type='method'><a href="module-RPCServer.html#~onError">onError</a></li><li data-type='method'><a href="module-RPCServer.html#~onReceiveMsg">onReceiveMsg</a></li><li data-type='method'><a href="module-RPCServer.html#~receiveMsg">receiveMsg</a></li><li data-type='method'><a href="module-RPCServer.html#~sendToServer">sendToServer</a></li><li data-type='method'><a href="module-RPCServer.html#~start">start</a></li><li data-type='method'><a href="module-RPCServer.html#~useFileSystem">useFileSystem</a></li><li data-type='method'><a href="module-RPCServer.html#~useLog">useLog</a></li></ul></li><li><a href="module-WorldManager.html">WorldManager</a><ul class='methods'><li data-type='method'><a href="module-WorldManager.html#.getUser">getUser</a></li><li data-type='method'><a href="module-WorldManager.html#.hasUser">hasUser</a></li><li data-type='method'><a href="module-WorldManager.html#.init">init</a></li><li data-type='method'><a href="module-WorldManager.html#.userOffline">userOffline</a></li><li data-type='method'><a href="module-WorldManager.html#.userOnline">userOnline</a></li></ul></li></ul><h3>Interfaces</h3><ul><li><a href="module-AbstractHandler-run.html">run</a></li></ul><h3>Global</h3><ul><li><a href="global.html#Sex">Sex</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">dto/BasicUser.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Created with JetBrains Idea.
+ * User: Gary
+ * Date: 2015/11/24
+ * Time: 18:02
+ * To change this template use File | Settings | File Templates.
+ *                 _ooOoo_
+ *                o8888888o
+ *                88" . "88
+ *                (| -_- |)
+ *                O\  =  /O
+ *             ____/`---'\____
+ *           .'  \\|     |//  `.
+ *           /  \\|||  :  |||//  \
+ *           /  _||||| -:- |||||-  \
+ *           |   | \\\  -  /// |   |
+ *           | \_|  ''\---/''  |   |
+ *           \  .-\__  `-`  ___/-. /
+ *         ___`. .'  /--.--\  `. . __
+ *      ."" '&lt;  `.___\_&lt;|>_/___.'  >'"".
+ *     | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+ *     \  \ `-.   \_ __\ /__ _/   .-` /  /
+ *======`-.____`-.___\_____/___.-`____.-'======
+ *                   `=---='
+ *^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *           佛祖保佑       永无BUG
+ */
+'use strict';
+const ring = require('ring');
+const Packet = require('./Packet');
+/**
+ * @module BasicUser
+ */
+module.exports = ring.create({
+    /**
+     * @property {*} id - 用户唯一标识
+     */
+    id: null, //唯一ID
+    /**
+     * @property {string} name - 用户名称
+     */
+    name: null, //名称
+    /**
+     * @property {Sex} sex - 用户性别 枚举
+     */
+    sex: null, //性别
+    server: null,
+    /**
+     * @property {Socket} channel - 用户通信通道
+     */
+    channel: null,
+    /**
+     * @property {Date} loginTime - 登陆时间
+     */
+    loginTime: null,
+    /**
+     * @property {Date} heartTime - 心跳时间
+     */
+    heartTime: null,
+    lastOfflineTime: null,
+    /**
+     * @property {object} stateListeners - 用户状态事件集合 需要重写赋值
+     */
+    stateListeners: null,
+    isOffline: false,
+    /**
+     * 向当前用户发送信息包
+     * @param {Packet} packet - 信息包
+     */
+    write: function(packet){
+        if(ring.instance(packet, Packet) &amp;&amp; this.isOnline()){
+            packet.write(this.channel, this.id);
+        }
+    },
+    /**
+     * 判断当前用户是否在线状态
+     * @returns {boolean}
+     */
+    isOnline: function(){
+        if(!this.channel || this.isOffline)return false;
+        return this.channel.writable;
+    },
+    /**
+     * 离线
+     */
+    offline: function(){
+        this.channel.end();
+        this.channel.destroy();
+        if(!this.isOffline)
+            this.stateChanged('offline');
+        this.isOffline = true;
+    },
+    /**
+     * 上线
+     */
+    online: function(){
+        this.stateChanged('online');
+    },
+    /**
+     * 重连
+     */
+    reconnect: function(){
+        this.stateChanged('reconnect');
+    },
+    stateChanged: function(state){
+        if(this.stateListeners &amp;&amp; this.stateListeners.length){
+            this.stateListeners.every(function(listener){
+                listener[state].call(listener, this);
+                return true;
+            }, this);
+        }
+    }
+});</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Thu Dec 03 2015 14:25:52 GMT+0800 (中国标准时间) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

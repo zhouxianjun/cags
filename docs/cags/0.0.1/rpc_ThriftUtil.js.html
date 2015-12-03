@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>rpc/ThriftUtil.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-AbstractHandler.html">AbstractHandler</a><ul class='methods'><li data-type='method'><a href="module-AbstractHandler.html#~getUser">getUser</a></li><li data-type='method'><a href="module-AbstractHandler.html#~login">login</a></li><li data-type='method'><a href="module-AbstractHandler.html#~write">write</a></li></ul></li><li><a href="module-BasicLengthDecoder.html">BasicLengthDecoder</a><ul class='methods'><li data-type='method'><a href="module-BasicLengthDecoder.html#~addCmdHandler">addCmdHandler</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~checkAuthorized">checkAuthorized</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~delCmdHandler">delCmdHandler</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~handleException">handleException</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~init">init</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~onMsg">onMsg</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~onReceive">onReceive</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~useFileSystem">useFileSystem</a></li></ul></li><li><a href="module-BasicUser.html">BasicUser</a><ul class='methods'><li data-type='method'><a href="module-BasicUser.html#~isOnline">isOnline</a></li><li data-type='method'><a href="module-BasicUser.html#~offline">offline</a></li><li data-type='method'><a href="module-BasicUser.html#~online">online</a></li><li data-type='method'><a href="module-BasicUser.html#~reconnect">reconnect</a></li><li data-type='method'><a href="module-BasicUser.html#~write">write</a></li></ul></li><li><a href="module-Builder.html">Builder</a></li><li><a href="module-ClassUtil.html">ClassUtil</a><ul class='methods'><li data-type='method'><a href="module-ClassUtil.html#.getObject">getObject</a></li><li data-type='method'><a href="module-ClassUtil.html#.reload">reload</a></li><li data-type='method'><a href="module-ClassUtil.html#.watch">watch</a></li></ul></li><li><a href="module-Packet.html">Packet</a><ul class='methods'><li data-type='method'><a href="module-Packet.html#~createSuccess">createSuccess</a></li><li data-type='method'><a href="module-Packet.html#~getBuffer">getBuffer</a></li><li data-type='method'><a href="module-Packet.html#~getSize">getSize</a></li><li data-type='method'><a href="module-Packet.html#~useLog">useLog</a></li><li data-type='method'><a href="module-Packet.html#~write">write</a></li></ul></li><li><a href="module-ProtobufUtil.html">ProtobufUtil</a><ul class='methods'><li data-type='method'><a href="module-ProtobufUtil.html#.getPath">getPath</a></li><li data-type='method'><a href="module-ProtobufUtil.html#.getUpPath">getUpPath</a></li><li data-type='method'><a href="module-ProtobufUtil.html#.isMessage">isMessage</a></li><li data-type='method'><a href="module-ProtobufUtil.html#.load">load</a></li></ul></li><li><a href="module-Result.html">Result</a></li><li><a href="module-RPCClient.html">RPCClient</a><ul class='methods'><li data-type='method'><a href="module-RPCClient.html#~getService">getService</a></li><li data-type='method'><a href="module-RPCClient.html#~init">init</a></li><li data-type='method'><a href="module-RPCClient.html#~onClose">onClose</a></li><li data-type='method'><a href="module-RPCClient.html#~onConnected">onConnected</a></li><li data-type='method'><a href="module-RPCClient.html#~onError">onError</a></li><li data-type='method'><a href="module-RPCClient.html#~onTimeout">onTimeout</a></li><li data-type='method'><a href="module-RPCClient.html#~reconnect">reconnect</a></li><li data-type='method'><a href="module-RPCClient.html#~sendToServer">sendToServer</a></li></ul></li><li><a href="module-RPCServer.html">RPCServer</a><ul class='methods'><li data-type='method'><a href="module-RPCServer.html#~add">add</a></li><li data-type='method'><a href="module-RPCServer.html#~del">del</a></li><li data-type='method'><a href="module-RPCServer.html#~getClient">getClient</a></li><li data-type='method'><a href="module-RPCServer.html#~getService">getService</a></li><li data-type='method'><a href="module-RPCServer.html#~init">init</a></li><li data-type='method'><a href="module-RPCServer.html#~onError">onError</a></li><li data-type='method'><a href="module-RPCServer.html#~onReceiveMsg">onReceiveMsg</a></li><li data-type='method'><a href="module-RPCServer.html#~receiveMsg">receiveMsg</a></li><li data-type='method'><a href="module-RPCServer.html#~sendToServer">sendToServer</a></li><li data-type='method'><a href="module-RPCServer.html#~start">start</a></li><li data-type='method'><a href="module-RPCServer.html#~useFileSystem">useFileSystem</a></li><li data-type='method'><a href="module-RPCServer.html#~useLog">useLog</a></li></ul></li><li><a href="module-WorldManager.html">WorldManager</a><ul class='methods'><li data-type='method'><a href="module-WorldManager.html#.getUser">getUser</a></li><li data-type='method'><a href="module-WorldManager.html#.hasUser">hasUser</a></li><li data-type='method'><a href="module-WorldManager.html#.init">init</a></li><li data-type='method'><a href="module-WorldManager.html#.userOffline">userOffline</a></li><li data-type='method'><a href="module-WorldManager.html#.userOnline">userOnline</a></li></ul></li></ul><h3>Interfaces</h3><ul><li><a href="module-AbstractHandler-run.html">run</a></li></ul><h3>Global</h3><ul><li><a href="global.html#Sex">Sex</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">rpc/ThriftUtil.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Created with JetBrains Idea.
+ * User: Gary
+ * Date: 2015/11/27
+ * Time: 17:13
+ * To change this template use File | Settings | File Templates.
+ *                 _ooOoo_
+ *                o8888888o
+ *                88" . "88
+ *                (| -_- |)
+ *                O\  =  /O
+ *             ____/`---'\____
+ *           .'  \\|     |//  `.
+ *           /  \\|||  :  |||//  \
+ *           /  _||||| -:- |||||-  \
+ *           |   | \\\  -  /// |   |
+ *           | \_|  ''\---/''  |   |
+ *           \  .-\__  `-`  ___/-. /
+ *         ___`. .'  /--.--\  `. . __
+ *      ."" '&lt;  `.___\_&lt;|>_/___.'  >'"".
+ *     | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+ *     \  \ `-.   \_ __\ /__ _/   .-` /  /
+ *======`-.____`-.___\_____/___.-`____.-'======
+ *                   `=---='
+ *^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *           佛祖保佑       永无BUG
+ */
+'use strict';
+const ring = require('ring');
+const thrift = require('thrift');
+const walk = require('walk');
+const path = require("path");
+const _ = require("underscore");
+const ProtoBuf = require("protobufjs");
+const ClassUtil = require('../util/ClassUtil');
+const Packet = require('../dto/Packet');
+const WorldManager = require('../WorldManager');
+const ServerThrift = require('./Server');
+const ProtobufUtil = require('../util/ProtobufUtil');
+const Result = ProtobufUtil.load('Result').build();
+/**
+ * @module RPCServer
+ */
+exports.Server = ring.create({
+    /**
+     * @property {int} - 监听端口
+     */
+    port: null,
+    processor: null,
+    server: null,
+    clientCache: new Map(),
+    _receiveMsgFn: null,
+    /**
+     * 可重写为null则不启用{@link sendToServer}
+     * @private
+     * @param packet
+     * @param id
+     */
+    receiveMsg: function(packet, id){
+        let temPacket = new Packet();
+        let ret = new Result();
+        if(packet.result) {
+            ret.code = packet.result.code;
+            ret.msg = packet.result.msg;
+        }
+        temPacket.result = ret;
+        temPacket.cmd = packet.cmd;
+        if(packet.body){
+            temPacket.body = ProtoBuf.ByteBuffer.fromBinary(packet.body, ProtoBuf.ByteBuffer.BIG_ENDIAN);
+        }
+        _.isFunction(this._receiveMsgFn) &amp;&amp; this._receiveMsgFn.call(this, temPacket, WorldManager.getUser(id))
+    },
+    /**
+     * @property {ServerOptions} - Thrift 服务器配置
+     */
+    options: {
+        transport: thrift.TFramedTransport,
+        protocol: thrift.TCompactProtocol
+    },
+    /**
+     * RPC服务器 构造函数
+     * @param {Object} opt - Thirft Server options
+     */
+    init: function(opt){
+        this.options = _.extend(this.options, opt);
+        this.processor = new thrift.MultiplexedProcessor();
+        if(_.isFunction(this.receiveMsg)) {
+            this.add('Server', {
+                thrift: ServerThrift,
+                handler: {
+                    receiveMsg: this.receiveMsg.bind(this)
+                }
+            });
+        }
+    },
+    /**
+     * 添加一个Service暴露
+     * @param {string} name - Service 名称
+     * @param handler - Service处理器 包含thrift、handler属性
+     */
+    add(name, handler){
+        this.processor.registerProcessor(name, new handler.thrift.Processor(handler.handler));
+        if(this.logger)
+            this.logger.info("注册Processor&lt;%s>", name);
+    },
+    /**
+     * 删除一个Service
+     * @param {string} name - Service 名称
+     */
+    del(name){
+        delete this.processor.services[name];
+        if(this.logger)
+            this.logger.info("注销Processor&lt;%s>", name);
+    },
+    /**
+     * 设置日志
+     * @function
+     * @param {Logger} log - 日志处理器
+     * @returns {Server}
+     */
+    useLog(log){
+        this.logger = log;
+        return this;
+    },
+    /**
+     * 启用文件系统Handler模式
+     * @function
+     * @param {string} dir - 文件夹路径
+     * @returns {Server}
+     */
+    useFileSystem(dir){
+        let self = this;
+        function onFile(root, fileStat){
+            let base = path.join(root, fileStat.name);
+            try{
+                let tmp = ClassUtil.reload(fileStat.name, base);
+                if(tmp.thrift &amp;&amp; tmp.handler){
+                    self.add(fileStat.name.substring(0, fileStat.name.length - '.js'.length), tmp);
+                }
+                tmp = null;
+            }catch (err){
+                if(this.logger)
+                    this.logger.error('加载Processor:%s事件处理器异常.', fileStat.name, err);
+            }
+        }
+        let walker = walk.walk(dir, {
+            followLinks: true,
+            filters: ['node_modules']
+        });
+        walker.on("file", function(root, fileStat, next){
+            onFile(root, fileStat);
+            next();
+        });
+        walker.on("errors", function(root, nodeStatsArray, next) {
+            nodeStatsArray.forEach(function (n) {
+                if(this.logger)
+                    this.logger.error("[ERROR] " + n);
+            });
+            next();
+        });
+        walker.on("end", function(){
+            if(this.logger)
+                this.logger.info('文件Processor加载完成!');
+        });
+        ClassUtil.watch(dir, function(f, prev){
+            onFile(path.dirname(f), this);
+        }, function(f, prev){
+            if(require.cache[f]){
+                let name = this.name.substring(0, this.name.length - '.js'.length);
+                self.del(name);
+                delete require.cache[f];
+            }
+        });
+        return this;
+    },
+    /**
+     * 启动RPC服务器
+     * @function
+     * @param {number} port - 监听端口
+     * @returns {Server}
+     */
+    start(port){
+        this.server = thrift.createMultiplexServer(this.processor, this.options);
+        this.server.on('error', function(err){console.error(err)});
+        this.server.listen(port);
+        return this;
+    },
+    /**
+     * 监听发生错误
+     * @function
+     * @param {function} fn - 函数
+     * @returns {Server}
+     */
+    onError(fn){
+        _.isFunction(fn) &amp;&amp; this.server.on('error', fn);
+        return this;
+    },
+    /**
+     * 监听服务器发送消息
+     * @param {function} fn - 函数
+     * @returns {Server}
+     */
+    onReceiveMsg(fn){
+        _.isFunction(fn) &amp;&amp; (this._receiveMsgFn = fn);
+        return this;
+    },
+    /**
+     * 获取一个指定RPC客户端
+     * @param {string} ip 远程服务器IP
+     * @param {int} port 远程服务器端口
+     * @param options 连接配置
+     * @returns {Client}
+     */
+    getClient(ip, port, options){
+        let self = this;
+        let key = ip + '#' + port;
+        if(this.clientCache.has(key)){
+            return this.clientCache.get(key);
+        }
+        let client = new Client(ip, port, options).onConnected(function(){
+            self.clientCache.set(key, client);
+        }).onClose(function(){
+            self.clientCache.delete(key);
+        });
+        return client;
+    },
+    /**
+     * 获取指定服务器服务
+     * @function
+     * @param {string} ip - 服务器IP地址
+     * @param {int} port - 服务器端口
+     * @param {string} name - Service名称
+     * @param {thrift} type - thrift
+     * @param {object} options - thrift options
+     * @returns {Promise}
+     */
+    getService(ip, port, name, type, options){
+        return this.getClient(ip, port, options).getService(name, type);
+    },
+    /**
+     * 向指定服务器发送消息
+     * @function
+     * @param {string} ip - 服务器IP地址
+     * @param {number} port - 服务器端口
+     * @param {Packet} packet - 消息包 cags.RPCServerTypes.Packet
+     * @param id - 玩家ID
+     */
+    sendToServer(ip, port, packet, id){
+        this.getClient(ip, port).sendToServer(packet, id);
+    }
+});
+/**
+ * @module RPCClient
+ */
+let Client = ring.create({
+    /**
+     * @property {ServerOptions} - Thrift 服务器配置
+     */
+    options: {
+        transport: thrift.TFramedTransport,
+        protocol: thrift.TCompactProtocol
+    },
+    processor: null,
+    connection: null,
+    ServerService: null,
+    serviceJob: [],
+    serviceCache: new Map(),
+    /**
+     * RPC客户端 构造函数
+     * @param {string} ip - 服务器IP地址
+     * @param {number} port - 服务器端口
+     * @param {Object} options
+     */
+    init: function(ip, port, options){
+        let self = this;
+        this.options = _.extend(this.options, options || {});
+        this.connection = thrift.createConnection(ip, port, this.options);
+        this.connection.on('error', function(err){console.error(err)});
+        this.connection.on('reconnecting', function(){self.serviceCache.clear()});
+        this.connection.on('close', function(){self.serviceCache.clear()});
+        this.connection.on('connect', function(){
+            while (self.serviceJob.length > 0){
+                self.serviceJob.pop()();
+            }
+        });
+        this.processor = new thrift.Multiplexer();
+    },
+    /**
+     * 监听发生错误
+     * @param {function} fn - 函数
+     * @returns {Client}
+     */
+    onError(fn){
+        _.isFunction(fn) &amp;&amp; this.connection.on('error', fn);
+        return this;
+    },
+    /**
+     * 监听连接成功事件
+     * @param {function} fn - 函数
+     * @returns {Client}
+     */
+    onConnected(fn){
+        _.isFunction(fn) &amp;&amp; this.connection.on('connect', fn);
+        return this;
+    },
+    /**
+     * 监听超时事件
+     * @param {function} fn - 函数
+     * @returns {Client}
+     */
+    onTimeout(fn){
+        _.isFunction(fn) &amp;&amp; this.connection.on('timeout', fn);
+        return this;
+    },
+    /**
+     * 监听连接关闭事件
+     * @param {function} fn - 函数
+     * @returns {Client}
+     */
+    onClose(fn){
+        _.isFunction(fn) &amp;&amp; this.connection.on('close', fn);
+        return this;
+    },
+    /**
+     * 获取Service
+     * @param {string} name - Service 暴露名称
+     * @param type - thrift js
+     * @returns {Promise}
+     */
+    getService(name, type){
+        let self = this;
+
+        if(this.serviceCache.has(name))return this.serviceCache.get(name);
+
+        let promise = new Promise(function(resolve, reject) {
+            if(self.connection.connected){
+                resolve(self.processor.createClient(name, type, self.connection));
+            }else{
+                self.serviceJob.unshift(function(){
+                    resolve(self.processor.createClient(name, type, self.connection));
+                });
+            }
+        });
+
+        this.serviceCache.set(name, promise);
+        return promise;
+    },
+    /**
+     * 重新连接远程服务器
+     */
+    reconnect(){
+        if(!this.connection.connected){
+            this.connection.connect(this.connection.port, this.connection.host);
+        }
+    },
+    /**
+     * 向远处服务器发送信息包
+     * @param {Packet} packet - 包
+     * @param id - 可选,发送指定用户
+     */
+    sendToServer: function(packet, id){
+        this.getService('Server', ServerThrift).then(function(service){
+            service.receiveMsg(packet, id);
+        });
+    }
+});
+exports.Client = Client;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Thu Dec 03 2015 14:25:52 GMT+0800 (中国标准时间) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

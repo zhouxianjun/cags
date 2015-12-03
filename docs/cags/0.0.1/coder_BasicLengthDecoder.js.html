@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>coder/BasicLengthDecoder.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-AbstractHandler.html">AbstractHandler</a><ul class='methods'><li data-type='method'><a href="module-AbstractHandler.html#~getUser">getUser</a></li><li data-type='method'><a href="module-AbstractHandler.html#~login">login</a></li><li data-type='method'><a href="module-AbstractHandler.html#~write">write</a></li></ul></li><li><a href="module-BasicLengthDecoder.html">BasicLengthDecoder</a><ul class='methods'><li data-type='method'><a href="module-BasicLengthDecoder.html#~addCmdHandler">addCmdHandler</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~checkAuthorized">checkAuthorized</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~delCmdHandler">delCmdHandler</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~handleException">handleException</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~init">init</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~onMsg">onMsg</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~onReceive">onReceive</a></li><li data-type='method'><a href="module-BasicLengthDecoder.html#~useFileSystem">useFileSystem</a></li></ul></li><li><a href="module-BasicUser.html">BasicUser</a><ul class='methods'><li data-type='method'><a href="module-BasicUser.html#~isOnline">isOnline</a></li><li data-type='method'><a href="module-BasicUser.html#~offline">offline</a></li><li data-type='method'><a href="module-BasicUser.html#~online">online</a></li><li data-type='method'><a href="module-BasicUser.html#~reconnect">reconnect</a></li><li data-type='method'><a href="module-BasicUser.html#~write">write</a></li></ul></li><li><a href="module-Builder.html">Builder</a></li><li><a href="module-ClassUtil.html">ClassUtil</a><ul class='methods'><li data-type='method'><a href="module-ClassUtil.html#.getObject">getObject</a></li><li data-type='method'><a href="module-ClassUtil.html#.reload">reload</a></li><li data-type='method'><a href="module-ClassUtil.html#.watch">watch</a></li></ul></li><li><a href="module-Packet.html">Packet</a><ul class='methods'><li data-type='method'><a href="module-Packet.html#~createSuccess">createSuccess</a></li><li data-type='method'><a href="module-Packet.html#~getBuffer">getBuffer</a></li><li data-type='method'><a href="module-Packet.html#~getSize">getSize</a></li><li data-type='method'><a href="module-Packet.html#~useLog">useLog</a></li><li data-type='method'><a href="module-Packet.html#~write">write</a></li></ul></li><li><a href="module-ProtobufUtil.html">ProtobufUtil</a><ul class='methods'><li data-type='method'><a href="module-ProtobufUtil.html#.getPath">getPath</a></li><li data-type='method'><a href="module-ProtobufUtil.html#.getUpPath">getUpPath</a></li><li data-type='method'><a href="module-ProtobufUtil.html#.isMessage">isMessage</a></li><li data-type='method'><a href="module-ProtobufUtil.html#.load">load</a></li></ul></li><li><a href="module-Result.html">Result</a></li><li><a href="module-RPCClient.html">RPCClient</a><ul class='methods'><li data-type='method'><a href="module-RPCClient.html#~getService">getService</a></li><li data-type='method'><a href="module-RPCClient.html#~init">init</a></li><li data-type='method'><a href="module-RPCClient.html#~onClose">onClose</a></li><li data-type='method'><a href="module-RPCClient.html#~onConnected">onConnected</a></li><li data-type='method'><a href="module-RPCClient.html#~onError">onError</a></li><li data-type='method'><a href="module-RPCClient.html#~onTimeout">onTimeout</a></li><li data-type='method'><a href="module-RPCClient.html#~reconnect">reconnect</a></li><li data-type='method'><a href="module-RPCClient.html#~sendToServer">sendToServer</a></li></ul></li><li><a href="module-RPCServer.html">RPCServer</a><ul class='methods'><li data-type='method'><a href="module-RPCServer.html#~add">add</a></li><li data-type='method'><a href="module-RPCServer.html#~del">del</a></li><li data-type='method'><a href="module-RPCServer.html#~getClient">getClient</a></li><li data-type='method'><a href="module-RPCServer.html#~getService">getService</a></li><li data-type='method'><a href="module-RPCServer.html#~init">init</a></li><li data-type='method'><a href="module-RPCServer.html#~onError">onError</a></li><li data-type='method'><a href="module-RPCServer.html#~onReceiveMsg">onReceiveMsg</a></li><li data-type='method'><a href="module-RPCServer.html#~receiveMsg">receiveMsg</a></li><li data-type='method'><a href="module-RPCServer.html#~sendToServer">sendToServer</a></li><li data-type='method'><a href="module-RPCServer.html#~start">start</a></li><li data-type='method'><a href="module-RPCServer.html#~useFileSystem">useFileSystem</a></li><li data-type='method'><a href="module-RPCServer.html#~useLog">useLog</a></li></ul></li><li><a href="module-WorldManager.html">WorldManager</a><ul class='methods'><li data-type='method'><a href="module-WorldManager.html#.getUser">getUser</a></li><li data-type='method'><a href="module-WorldManager.html#.hasUser">hasUser</a></li><li data-type='method'><a href="module-WorldManager.html#.init">init</a></li><li data-type='method'><a href="module-WorldManager.html#.userOffline">userOffline</a></li><li data-type='method'><a href="module-WorldManager.html#.userOnline">userOnline</a></li></ul></li></ul><h3>Interfaces</h3><ul><li><a href="module-AbstractHandler-run.html">run</a></li></ul><h3>Global</h3><ul><li><a href="global.html#Sex">Sex</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">coder/BasicLengthDecoder.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+const path = require("path");
+const domain = require('domain').create();
+const ring = require("ring");
+const walk = require('walk');
+const ProtoBuf = require("protobufjs");
+const LengthDecoder = require('simple-net').coder.LengthDecoder;
+const ProtobufUtil = require('../util/ProtobufUtil');
+const Result = ProtobufUtil.load('Result').build();
+const AbstractHandler = require('../AbstractHandler');
+const ClassUtil = require('../util/ClassUtil');
+/**
+ * @module BasicLengthDecoder
+ */
+module.exports = ring.create([LengthDecoder], {
+    /**
+     * @property {Map} handlers - 所有CMD处理器
+     */
+    handlers: {},
+    /**
+     * @property {BasicUser} user - 已登录的用户,调用 login函数
+     */
+    user: null,
+    /**
+     * 构造函数,重写了simple-net.LengthDecoder
+     * @override
+     */
+    init: function(){
+        this.$super.apply(this, arguments);
+        domain.on('error', this.handleException.bind(this));
+    },
+    /**
+     * 当信息收到时触发
+     * @param {buffer} buffer - 数据
+     * @param {int} length - 数据长度
+     */
+    onReceive: function(buffer, length){
+        let buf = new ProtoBuf.ByteBuffer(length + 2, ProtoBuf.ByteBuffer.BIG_ENDIAN);
+        buf.append(buffer);
+        let offset = 2; //-length
+        //当前请求CMD
+        const cmd = buf.readShort(offset);
+        offset += 2; //cmd 长度
+        //消息RET 长度
+        const retSize = buf.readShort(offset);
+        offset += 2; //retSize 长度
+        //消息RET
+        const ret = buf.readBytes(retSize, offset);
+        offset += retSize; //ret 长度
+        let result;
+        try {
+            result = Result.decode(ret);
+        } catch (err) {
+            let tmp = new Result.encode();
+            result = Result.decode(tmp);
+        }
+        //消息body
+        const bodyLen = length - 4 - retSize;
+        const body = buf.readBytes(bodyLen, offset);
+        if(this.logger)
+            this.logger.info("接收到消息:CMD:0x%d, ip:%s, port:%d, 总长度:%d, ret长度:%d, body长度:%d, code:%d, msg:%s", cmd, this.ip, this.port, length, retSize, bodyLen, result.code, result.msg);
+        this.onMsg &amp;&amp; this.onMsg.call(this, length, cmd, result, body);
+    },
+    /**
+     * onReceive 处理完毕回调
+     * @param {int} length - 长度
+     * @param {short} cmd - 指令
+     * @param {Result} result - 返回状态
+     * @param {buffer} body - 真实数据内容
+     */
+    onMsg: function(length, cmd, result, body){
+        let handler = this.handlers[cmd];
+        if(handler != null){
+            let proc = new handler(this);
+            if(!ring.instance(proc, AbstractHandler)){
+                if(this.logger)
+                    this.logger.warn("错误的处理器, cmd=0x%d, handler=%s", cmd, proc);
+                delete this.handlers[cmd];
+                return;
+            }
+            proc.startTime = new Date().getTime();
+            if(this.checkAuthorized(proc)) {
+                domain.run(function(){
+                    proc.before &amp;&amp; proc.before.call(proc, length, cmd, result, body);
+                    if (proc.async) {
+                        setImmediate(proc.run.bind(proc), length, cmd, result, body);
+                    } else {
+                        proc.run.call(proc, length, cmd, result, body);
+                    }
+                });
+            }
+        }else{
+            if(this.logger)
+                this.logger.warn("收到没有处理事件的消息, [IP:PORT = %s:%d,cmd = 0x%d]", this.ip, this.port, cmd);
+        }
+    },
+    /**
+     * 验证权限,通过则调用CMD处理器
+     * @param {AbstractHandler} handler - CMD处理器
+     * @returns {boolean}
+     */
+    checkAuthorized: function(handler){
+        if(handler.auth &amp;&amp; !this.user){
+            return false;
+        }
+        return true;
+    },
+    /**
+     * 异常时调用
+     * @param {Error} err - 异常信息
+     */
+    handleException: function(err){
+        if(this.logger){
+            this.logger.warn("处理CMD异常, [IP:PORT = %s:%d] %s", this.ip, this.port, err);
+        }
+    },
+    /**
+     * 添加一个CMD处理器
+     * @param {AbstractHandler} handler - CMD处理器
+     * @param {string} name - 名称
+     * @returns {BasicLengthDecoder}
+     */
+    addCmdHandler: function(handler, name){
+        if(handler &amp;&amp; name){
+            let cmd = handler.__properties__.cmd;
+            this.handlers[cmd] = handler;
+            if(this.logger)
+                this.logger.info("注册Handler&lt;%s>--CMD:0x%d", name, cmd);
+        }
+        return this;
+    },
+    /**
+     * 删除一个CMD处理器
+     * @param {short} cmd - 指令
+     * @param {string} name - 名称
+     * @returns {BasicLengthDecoder}
+     */
+    delCmdHandler: function(cmd, name){
+        if(this.handlers[cmd] &amp;&amp; name){
+            delete this.handlers[cmd];
+            if(this.logger)
+                this.logger.info("注销Handler&lt;%s>--CMD:0x%d", name, cmd);
+        }
+        return this;
+    },
+    /**
+     * 启用文件系统Handler模式
+     * @param {string} dir - 文件夹路径
+     * @param {Array} dirFilters - 文件夹过滤
+     * @returns {BasicLengthDecoder}
+     */
+    useFileSystem: function(dir, dirFilters){
+        let self = this;
+        function onFile(root, fileStat){
+            let base = path.join(root, fileStat.name);
+            try{
+                let tmp = ClassUtil.reload(fileStat.name, base);
+                if(tmp.__properties__.cmd &amp;&amp; typeof tmp.__properties__.run === 'function'){
+                    self.addCmdHandler(tmp, fileStat.name.substring(0, fileStat.name.length - '.js'.length));
+                }
+                tmp = null;
+            }catch (err){
+                if(this.logger)
+                    this.logger.error('加载Handler:%s事件处理器异常.', fileStat.name, err);
+            }
+        }
+        let walker = walk.walk(dir, {
+            followLinks: true,
+            filters: dirFilters || ['node_modules']
+        });
+        walker.on("file", function(root, fileStat, next){
+            onFile(root, fileStat);
+            next();
+        });
+        walker.on("errors", function(root, nodeStatsArray, next) {
+            nodeStatsArray.forEach(function (n) {
+                if(this.logger)
+                    this.logger.error("[ERROR] " + n);
+            });
+            next();
+        });
+        walker.on("end", function(){
+            if(this.logger)
+                this.logger.info('文件handler加载完成!');
+        });
+        ClassUtil.watch(dir, function(f, prev){
+            onFile(path.dirname(f), this);
+        }, function(f, prev){
+            if(require.cache[f]){
+                let name = this.name.substring(0, this.name.length - '.js'.length);
+                self.delCmdHandler(require.cache[f].exports.__properties__.cmd, name);
+                delete require.cache[f];
+            }
+        });
+        return this;
+    }
+});</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Thu Dec 03 2015 14:25:52 GMT+0800 (中国标准时间) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
