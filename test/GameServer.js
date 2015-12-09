@@ -59,7 +59,7 @@ gs.WorldManager.init(60 * 1000);
 //启动RPC服务器之间的通讯服务,并监听其他服务器发送的信息
 let rpcServer = new gs.RPC.Server();
 rpcServer.useLog(logger).useFileSystem('./thriftHandler').onReceiveMsg(function(packet, id){
-    console.log(packet.cmd);
+    console.log('收到服务器发送信息:CMD:0x' + packet.cmd);
 }).start(1111);
 //向指定服务器发送信息
 rpcServer.sendToServer('192.168.5.16', 1111, new gs.RPCServerTypes.Packet({
@@ -70,4 +70,17 @@ rpcServer.getService('192.168.5.16', 1111, 'Server', gs.RPCServer).then(function
     service.receiveMsg(new gs.RPCServerTypes.Packet({
         cmd: 0x0002
     })/**有返回值的function(err, res){}*/);
+});
+
+const Memcached = require('memcached');
+const TestCacheMgr = require('./manager/TestCacheManager');
+//创建一个缓存管理器
+let testCacheMgr = gs.util.Class.getObject(TestCacheMgr, new Memcached('192.168.5.16'));
+//获取该缓存管理器数据
+testCacheMgr.getAll().then(function(data){
+    console.log(data);
+}).catch(function(err){
+    if(err){
+        console.error(err);
+    }
 });
