@@ -62,20 +62,20 @@ rpcServer.useLog(logger).useFileSystem('./thriftHandler').onReceiveMsg(function(
     console.log('收到服务器发送信息:CMD:0x' + packet.cmd);
 }).start(1111);
 //向指定服务器发送信息
-rpcServer.sendToServer('192.168.5.16', 1111, new gs.RPCServerTypes.Packet({
+rpcServer.sendToServer('127.0.0.1', 1111, new gs.RPCServerTypes.Packet({
     cmd: 0x0001
 }));
 //获取指定服务器服务并且执行函数
-rpcServer.getService('192.168.5.16', 1111, 'Server', gs.RPCServer).then(function(service){
+rpcServer.getService('127.0.0.1', 1111, 'Server', gs.RPCServer).then(function(service){
     service.receiveMsg(new gs.RPCServerTypes.Packet({
         cmd: 0x0002
     })/**有返回值的function(err, res){}*/);
 });
 
-const Memcached = require('memcached');
+//const Memcached = require('memcached');
 const TestCacheMgr = require('./manager/TestCacheManager');
-//创建一个缓存管理器
-let testCacheMgr = gs.util.Class.getObject(TestCacheMgr, new Memcached('192.168.5.16'));
+//创建一个缓存管理器 如果不传入memcached则使用本地缓存
+let testCacheMgr = gs.util.Class.getObject(TestCacheMgr/*, new Memcached('127.0.0.1')*/);
 //获取该缓存管理器数据
 testCacheMgr.getAll().then(function(data){
     console.log(data);

@@ -52,7 +52,7 @@ rpcServer.getService('192.168.5.16', 1111, 'Server', cags.RPCServer).then(functi
 
 const Memcached = require('memcached');
 const TestCacheMgr = require('./manager/TestCacheManager');
-//创建一个缓存管理器
+//创建一个缓存管理器 如果不传入memcached则使用本地缓存
 let testCacheMgr = cags.util.Class.getObject(TestCacheMgr, new Memcached('192.168.5.16'));
 //获取该缓存管理器数据
 testCacheMgr.getAll().then(function(data){

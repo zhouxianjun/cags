@@ -36,5 +36,8 @@ module.exports = ring.create([BasicUser], {
         offline: function(user){
             console.log(user.id + '下线了');
         }
-    }]
+    }],
+    kickOff(ip){
+        console.log('%s 被 ip:%s踢下线。', this.id, ip);
+    }
 });

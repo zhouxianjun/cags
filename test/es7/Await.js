@@ -1,4 +1,7 @@
 /**
+ * Created by zhouxianjun on 2016/1/12.
+ */
+/**
  * Created with JetBrains Idea.
  * User: Gary
  * Date: 2015/11/25
@@ -27,40 +30,15 @@
  */
 
 'use strict';
-/*
-var promise = function(ms){
-    return new Promise(function(resolve, reject) {
-        setTimeout(resolve.bind(this, 'done'), ms);
-    });
-};
-promise(2000).then(function(val){
-    yield setTimeout(function(){console.log(111)}, 2000);
-    console.log(val);
-});*/
-const fs = require('fs');
-const co = require('co');
-co(function *(){
+let http = require('http');
+async function getData(){
     let res;
     try{
-        res = yield (function(){
-            return function(cb){
-                fs.readFile('./GameServer.js', 'utf-8', cb);
-            }
-        })();
+        res = await http.get('http://www.qq.com');
     }catch(e){
-        console.error(e.message);
+        console.error(e);
     }
-    //console.log(res);
-});
+    console.log(res);
+}
 
-const TestCacheMgr = require('./manager/TestCacheManager');
-//创建一个缓存管理器
-let testCacheMgr = new TestCacheMgr();
-//获取该缓存管理器数据
-testCacheMgr.getAll().then(function(data){
-    console.log(data);
-}).catch(function(err){
-    if(err){
-        console.error(err);
-    }
-})
+getData();

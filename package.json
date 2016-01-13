@@ -27,7 +27,8 @@
     "simple-net": "*",
     "thrift": "^0.9.3",
     "underscore": "*",
-    "walk": "^2.3.9"
+    "walk": "^2.3.9",
+    "watch": "^0.17.1"
   },
   "keywords": [
     "game",
